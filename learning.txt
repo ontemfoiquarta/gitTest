@@ -1,0 +1,20 @@
+COMMAND LINE INTERFACE - 
+
+1 - EDITING THE LINE:
+
+	Command Lines include several features to make it easy to repeat previous commands.
+	One of the most useful ways to edit the line is to "up arrow", which simply retrieves 
+	the previous command.
+	
+	Other common ways to edit the line use the control key, generally paired with
+	"A", "E" or "U". [CTRl A] takes us to the beggining of the line, [CTRL E] takes us 
+	to the end of the line and [CTRL U] clears to the beggining of the line and
+	lets us start over.
+
+1.1 - CLEANING UP:
+
+	When using the command line sometimes it's convenient to be able to clean up by clearing
+	the screen, we can by using [Clear] ou [CRTL L]
+
+	Similarly, when we are done the a terminal window and are ready to exit we can use the
+	[Exit] command or use the shortcut [CTRL D]
