@@ -50,3 +50,162 @@ For example,
 	git add . is read as git | add | ., where the period represents everything in the current directory;
 	git commit -m "message" is read as git | commit -m | "message"; and
 	git status is read as git | status | (no destination).
+
+
+JS FOUNDATIONS
+
+1 - VARIABLES & OPERATORS
+
+1.1 HOW TO RUN JAVASCRIPT CODE
+
+	The majority of JS we will be writting in the FOUNDATIONS course will be run via the browser.
+	Later lessions in FOUNDATIONS and the NODEJS path will show us how to run JS outside the 
+	browser environment.
+
+	The simplest way to get started is to create an HTML file (like we already did) with the 
+	Javascript code inside of it. Think like inline CSS but for JS.
+	We can write JS inside <script> tags.
+
+	Another, more organized way, of including Javascript in a webpage is through an external script. 
+	This is very similar to linking external CSS docs to our website.
+
+1.2 VARIABLES
+
+	Variables are the building blocks of any program. You can think of variables as "storage containers"
+	for data in our code. A bit like DIVs in CSS but with more logic involved.
+
+	We can declare variable by using the [let] keyword.
+
+	We can also re-assign [let] variables.
+
+		let age = 11;
+	console.log(age); // outputs 11 to the console
+
+		age = 54;
+ 
+	console.log(age); // outputs 54 to the console
+
+	Since the variable had alreay been declared we are just re-assigining its value.
+
+
+	If, however, we wanted a "variable" whose value was constant we can acheive that by using the 
+	[const] keyword.
+
+		const pi = 3.14;
+
+		pi = 10;
+
+	console.log(pi); // What will be output?
+
+	Since we declared a constant value earlier we would expect the console.log returned a 3.14. that
+	was no the case. Whenever we try to re-assign a constant value JS will automatically print
+	an error code and wont even try to make the operation.
+
+	There is a third way to declare variables. The original way variables were declared was by 
+	using [var]. [var] and [let] are similar in purpose and capability. [var], however, has some
+	quirks and misuses that [let] doesn't, By and large, [var] is not used anymore.
+
+
+1.3 NUMBERS	
+
+	Numbers are the building blocks of programing logic. Every single program involves at least some
+	math.
+	Javascript reads and interprets mathematical expressions and mathematical language. If we
+	put it inside console.log it'll evalute the expression and output the correct number.
+
+
+1.4 Javascript math
+
+	We use different terms to describe different types of decimal numbers, for example:
+
+	INTEGERS are numbers without fractional part. They can either be positive or negative (10,400, -5).
+	
+	FLOATING POINT NUMBERS (FLOATS) have decimal points and decimal places, for example 12.5 and
+	56.77865
+
+	We eve have different types of number systems. Decimal is base 10 (meaning it uses 0-9 in each digit),
+	but we also have things like:
+
+	Binary - The lowest level of language; 0s and 1s;
+	Octal - Base 8, uses 0-7 in each digit;
+	Hexadecimal - Base 16, uses 0-9 and then a-f in each digit. Some types of colors are coded
+	using Hexadecimal notation.
+
+
+	Javascript, unlike other programming languages only has one data type for numbers, both integers, and
+	decimals, and it's called [NUMBER]. This means whatever type of numbers we are dealing with in 
+	JS, we handle them in the same way.
+
+1.4.1 - Converting to number data types
+
+		Sometimes we end up with a number that is stored as a string type, which makes it 
+		difficult to perform calculation with. This most commonly happens when data is entered into
+		a form input, and the input type is text. We can, however, solve this problem --
+		passing the string value into a Number() constructor to return a number version of the same
+		value. 
+
+			let myNumber = "74";
+			myNumber = Number(myNumber) + 3;
+			console.log (myNumber);
+
+
+1.5 Arithmetic Operators 
+
+	We perform mathematical operations in JS with the help of these operators:
+
+	+ | Addition | Adds two numbers together | 6+9
+	- | Subtraction| Subtracts the right from the left | 20-15
+	* | Multiplication | Multiples two numbers | 3*7
+	/ | Divison | Divides the left by the right | 10/5
+	% | Remainder/Modulo | Returns an integer from the remainder of the division | 8 % 3 = 2
+	**| Exponent | Raises a base number to the exponent power | 5**2 === 25 === 5*5
+
+
+
+1.6 Assignment Operators
+
+	Assignment operators are operatores that assign a value to a variable. We have already
+	used the most basic one, =, - it assigns the variable on the left the value stated on the right.
+
+	-> But there are some more complex types:
+
+	+= | Adds the value on the right to the variable value on the left and returns the new variable.
+
+	-= | Subtracts the value on the right to the variable value on the left and returns the new 
+		 variable.
+
+	*= | Multiplies the value on the right to the variable value on the left and returns the new 
+		 variable.	 
+
+	/= | Divides the value on the right to the variable value on the left and returns the new 
+		 variable.	 	 
+
+
+1.7 Comparison Operators
+
+	Sometimes we want to run true/false tests, then act accordingly depending on the result
+	of that test - to do this we use Comparions Operators.
+
+	=== | Strict Equality | Tests whether the left and right values are equal (both in value and data
+		  type).
+
+	!== | Strict Non-Equality | Tests whether values are not equal from left to right
+
+	<	| Less Than | Tests whether the left value is smaller than the right one.
+
+	>	| Greater than | Tests whether the left value is greater than the right one.
+
+	<=	| Less than or equal to
+
+	>=	| Greater than or equal to
+
+	
+	If we try entering some of these values in a console, we'll see they all return as 
+	[true] or [false] meaning they are boolean statements. These are very useful, as they allow us
+	to make decisions in our code, and they are used every time we want to make a choice of 
+	some kind. Booleans can be used to:
+
+		-	Display the correct text label on a button, if a feature is on or off;
+		-	Display a game over message it a game is over or victory message if the game has been won;
+		-	Display the correct season greeting on what holiday seaon it is;
+		-	Zoom a map in or out depending on what zoom level is selected.
