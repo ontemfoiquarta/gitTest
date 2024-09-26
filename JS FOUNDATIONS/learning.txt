@@ -364,11 +364,62 @@ JS FOUNDATIONS
 		 These constructs can be really useful in some situations. For example, if a user 
 		 enters a number into a form's text field, it's a string, However, if you want to 
 		 add this number to something, you'll need it to be a number, so you could pass it
-		 through Number() to handle this.
+		 through Number() to handle this.		
 
-aa
-		
+	
+	 2.2 SWITCH STATEMENTS 
+
+	 	 An alterative do If/else statements. It can replace multiple
+		 if checks and it gives a more descriptive way to compare a value
+		 with multiple variants.
+
+		 Syntax:
+
+		 const favoriteAnimal = "jaguar"
+
+		 switch (favoriteAnimal) {
+			
+    		case "jaguar":
+        		console.log ("eww")
+        		break
+
+    		case "dog":
+        		console.log ("yay")
+         		break
+
+			 default:
+			 	console.log ("I don't know that one")	
+
+}
 
 
+		 The value of favoriteAnimal is checked for a strict equality (===) to the 
+		 value from the first [case].
+		 If the equality is found switch starts to execute the code from the corresponding
+		 [case] until the nearest [break] or until the end of the switch (meaning if we
+		 forget to break the code it will pass every case after the equal).
 
+		 if no case is matched then the [default] code is executed (if it exists).
 
+		 
+ 3 - FUNCTIONS
+		3.1 BASICS
+
+			Let's start with an example:
+
+			function favoriteAnimal(animal) {
+    			return animal + " is my favorite animal!"
+			}
+
+			console.log(favoriteAnimal('Goat'))
+
+		In Javascript, parameters are the items listed between parentheses in the
+		function declaration. In this case our parameter is [animal] and we are 
+		telling Javascript we will send some value to our favoriteAnimal function.
+		This means that [animal] is just a placeholder for some future values.
+
+		the last line, favoriteAnimal("Goat") is where we are calling our favoriteAnimal
+		function and passing the value of "Goat". Here, "Goat" is our argument and we
+		will be sending that string to where [animal] is. In this case, and since this 
+		function only aims at returnig a string of [parameter + string], Whenever
+		we call this function it will print a string.

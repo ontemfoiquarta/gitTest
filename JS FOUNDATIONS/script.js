@@ -1,22 +1,13 @@
-let num1 = 1;
-let num2 = 3;
-let num3 = 12;
-let num4 = 24;
+let browser = prompt("What's your favorite browser?");
+let input = browser.toLowerCase()
 
-let sum = num1 + num2;
-let subtract = num4 - num3;
-let finalResult = subtract * sum;
-let evenOddResult;
-
-
-
-if (finalResult % 2 === 0) {
-    evenOddResult = 0
+if(input == "edge") {
+    alert ("You've got the edge!")
+} else if (browser == "chrome"
+    || input == "firefox"
+    || input == "safari"
+    || input == "opera") {
+    alert ("Okay, we support those too")
+} else {
+    alert ("We hope that this page looks ok")
 }
-else {
-    evenOddResult = 1
-}
-
-
-console.log (finalResult)
-console.log(evenOddResult)
