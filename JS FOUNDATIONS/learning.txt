@@ -401,8 +401,8 @@ JS FOUNDATIONS
 
 		 if no case is matched then the [default] code is executed (if it exists).
 
-		 
- 3 - FUNCTIONS
+		 3 - FUNCTIONS
+
 		3.1 BASICS
 
 			Let's start with an example:
@@ -565,3 +565,50 @@ JS FOUNDATIONS
 				showMessage();
 
 				alert (userName); // Bob.
+ 
+
+
+ 
+ 	4 - PROBLEM SOLVING
+
+		4.1 - UNDERSTANDING THE PROBLEM
+
+			The first step to solving a problem is to exactly understant what the
+			problem is. If we don't understand the problem we won't even know where
+			to start.
+			To gain some clarity we can write the problem down in a piece of paper, 
+			reword it into plain english or even drawing diagrams if that helps.
+		
+				When we can explain the problem to someone in plain English it means
+				we understand it.
+		 
+
+		4.2 - PLANING
+
+			Now that we have grasped the problem at hands it is time to plan how are 
+			going to solve said problems. Some of the question we should answer at this 
+			stage include:
+
+					1 - Does your program have a user interface? What will it look like?
+					(Sketch this out on paper)
+
+					2  What inputs will the program have? Will the user enter the data
+					ou will we get the inputs from somewhere else?
+
+					3 - What's the desired output?
+
+					4 - Given the inputs, what are the necessary steps to return
+					the desired output?
+			
+			Planning also includes the writting of PSEUDOCODE, which is, writting the program
+			in natural language. This will help us slow doen and think through the steps we'll have
+			to take in order to solve the problem.
+		
+		 
+		 4.3 - DIVIDE AND CONQUER
+
+		 		Many begginers try to solve the big problem in one go. DONT DO THIS. If the problem
+				is sufficiently complex, you'll get tied in knots and make life a lot harder.
+				Decomposing problems into smaller, easier subproblems is a much better approach.
+
+				In short, break the big problems into little problems.
