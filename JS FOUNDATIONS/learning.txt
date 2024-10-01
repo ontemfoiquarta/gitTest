@@ -612,3 +612,88 @@ JS FOUNDATIONS
 				Decomposing problems into smaller, easier subproblems is a much better approach.
 
 				In short, break the big problems into little problems.
+
+
+	 5 - UNDERSTANDING ERRORS	
+
+		 5.1 - ANATOMY OF AN ERROR		
+
+				An error is a type of object built into the JS language (and other languages) 
+				consisting of a name/type and a message. Errors contain crucial information that
+				can assist you in locating the code responsible for the error.
+
+					Take this example:
+
+						const a = "Hello";
+						const b = "World";
+
+						console.log(c);
+
+						-> Uncaught ReferenceError: c is not defined 
+								at script.js:4
+
+				 This code will in fact run, but will throw an error. The first part of an 
+				 error displays the type of error. This provdes the first clue as to what 
+				 we're dealing with. In this example we generated an [ReferenceError] since
+				 we called for a variable that we didn't previously defined.	
+
+				 The error message also points us to the file where the error occured, in this
+				 case [script.js] and to the line where it happened, allowing us to be 
+				 extra accurate while debbuging our code.	
+
+				 Another important part of an error is the stack trace. This helps us understand
+				 the path of the error, and what functions were called that led up to the error.
+
+					 Take the following:	
+
+					 		const a = 5;
+							const b = 10;
+
+							function add() {
+							return c;
+							}
+
+							function print() {
+							add();
+							}
+
+							print();
+
+				 Our function print() is supposed to call on add() which in turn returns the 
+				 variable c. However, just like the previous example, c was not defined anywhere
+				 in our code. As a result our entire code will throw a ReferenceError like the 
+				 following:
+
+						Uncaught ReferenceError: c is not defined
+							at add at script.js:5
+							at print at script.js:9
+		 					at script.js:12
+
+
+		 5.2 - COMMON TYPES OF ERRORS
+
+		 			SYNTAX ERROR -> A syntax error occurs when the code we are trying to run
+					is not written correctly, i.e, in accordance with the grammatical rules of
+					JS. An example below:
+
+						function helloWorld() {
+							console.log "Hello World!"
+							}
+
+					 This code will throw a SyntaxError: Invalid or unexpected token since
+					 we forgot to put parentheses for the method console.log()	
+
+
+					 REFERENCE ERROR -> Already covered above, the Referece Error appears when
+					 we are trying to call an inexistent or out of scope variable	
+					
+
+					 Type Error -> Type Errors may be the most complex of the three. They are
+					 thrown when:
+
+					 	. An operand or argument passed to a function is incompatible
+						with the type expected by that operator or function;
+
+						. Or when attempting to modify a value that cannot be changed;
+
+						. Or when attempting to use a value in an inappropriate way.
